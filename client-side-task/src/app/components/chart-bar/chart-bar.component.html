@@ -1,0 +1,9 @@
+<div class="chart">
+    <div 
+        [style.background-color]="chartColors[i]" 
+        [style.width]="chartValue.percentageFromTotalSum + '%'" 
+        class="chart-item" *ngFor="let chartValue of chartValues;let i = index">
+            <div class="base-chart-item"></div>
+            <div [style.background-color]="chartColors[i + 1]" *ngIf="i !== chartValues.length - 1" class="appendix"></div>
+    </div>
+</div>
